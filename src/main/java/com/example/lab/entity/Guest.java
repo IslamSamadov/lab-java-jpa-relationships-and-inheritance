@@ -3,7 +3,7 @@ package com.example.lab.entity;
 import jakarta.persistence.*;
 
 @Entity
-public class Guest extends Event{
+public class Guest{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -13,7 +13,6 @@ public class Guest extends Event{
     @Enumerated(EnumType.STRING)
     private GuestStatus status;
 
-    @Override
     public Long getId() {
         return id;
     }
